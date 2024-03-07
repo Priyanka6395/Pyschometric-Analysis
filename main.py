@@ -16,5 +16,5 @@ if __name__== "__main__":
         if user_input.lower() in ["quit","exit","bye","terminate"]:
             break
 
-        response=chat_with_gpt(user_input)
+        response=chat_with_gpt(user_input) 
         print("Chatbot: ", response)
