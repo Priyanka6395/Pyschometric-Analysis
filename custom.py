@@ -1,17 +1,18 @@
 import openai
 
-openai.api_key = "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"
-
+#openai.api_key = "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"
+openai.api_key="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"
 def initial():
-    description = """
-1. "I will provide you with a questions and answers from the student. Based on the response, please assign points up to 10 for psychological behavior, logical behavior, and mental behavior." 
-2. based on emotional intelligence, communication skills, stress management, attitude and motivation, interpersonal skills, professionalism and cultural based on all these parameters you should rate the psychological behaviour not individually.   
-3. based on problem solving skills, critical thinking, decision making, creativity and innovation, adaptability, attention to detail and memory recall based on all these parameters you should rate the mental behaviour not individually.
-4. based on clarity of thought, evidence based reasoning, problem solving approach, consistency, logical deduction, analytical skills, decision-making process based on all these parameters you should rate the logical behaviour not individually.
-5. the side headings should be in a new line psychological behavior heading followed by in a new line score followed by with a new line description, logical behavior  heading followed by in a new line score followed by with a new line description, and mental behavior  heading followed by in a new line score followed by with a new line description not individually."
-    """
+    description = """I will provide you with questions and answers from the student. Based on the response, please assign points up to 10 for psychological behavior, logical behavior, and mental behavior. For psychological behavior, evaluate emotional intelligence, communication skills, stress management, attitude and motivation, interpersonal skills, professionalism, and cultural understanding. For mental behavior, consider problem-solving skills, critical thinking, decision making, creativity and innovation, adaptability, attention to detail, and memory recall. For logical behavior, assess clarity of thought, evidence-based reasoning, problem-solving approach, consistency, logical deduction, analytical skills, and decision-making process."
+the response will follow this format.Psychological Behavior Score:
+Description: 
+Logical Behavior Score:
+Description:
+Mental Behavior Score: 
+Description: 
+the descriptions should strictly be under 10 words."""
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="text-ada-001",
         messages=[{"role": "user", "content": description}]
     )
 
@@ -19,7 +20,7 @@ def initial():
 
 def prompt(input):
     messages = []  # Initialize an empty list for messages
-    messages.append({"role": "user", "content": input})  # Append user input
+    messages.append({"role": "user", "content": f"this is the question and answer.{input}"})  # Append user input
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=messages
@@ -30,7 +31,8 @@ def prompt(input):
 if __name__ == "__main__":
     response = initial() 
     while True:
-        user_input = input("You: ")
+        user_input = """Question: That's great, Harsha. Now, can you tell me what motivated you to apply for this job?
+                    Answer: I badly need a salary"""
         if user_input.lower() in ["quit", "exit", "bye", "terminate"]:
             break
 
