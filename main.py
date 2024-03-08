@@ -1,9 +1,9 @@
 import openai
 
-openai.api_key="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"
+openai.api_key="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"
 
 def chat_with_gpt(prompt):
-    response=openai.chat.completions.create(
+    response=openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[{"role":"user", "content":prompt}]
     )
@@ -18,6 +18,5 @@ if __name__== "__main__":
 
         response=chat_with_gpt(user_input) 
         print("Chatbot: ", response)
-
-
-        #harsha priya
+        
+#python file name
