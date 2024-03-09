@@ -24,7 +24,7 @@ def assess_candidate(response):
 response = """
 Question: Hello, I am Lucy, an HR interviewer from Reaidy company. Can you please introduce yourself and tell me about your background and experience? Answer: Hello, Good morning my name is Harsha Priya at present I am studying in Final year btech in Vignan's institute of information and technology. in branch of artificial intelligence and data science Question: That's great, Harsha. Now, can you tell me what motivated you to apply for this job? Answer: I badly need a salary Question: Understood. Can you please share your understanding of the role you are applying for? Answer: any technical job Question: Sure. Moving on, can you tell me about your previous work experience, if any? Answer: Yeah i worked in rail sadan bbs there i have done project based on web development which is done used by the tech nologies html,css and bootstrap and present at spotmies as an ml developer Question: That's impressive, Harsha. Now, can you tell me how would you handle a situation where you have a deadline to meet, but you are unable to complete the task on time? Answer: I'll ask the team leader to help me by adding few more employees to my team so i can complete before the deadline Question: Great approach, Harsha. Now, can you tell me how do you manage your time and prioritize your tasks at work? Answer: Based on the deadline and importance ill prioritize my work
 """
-
+#response=input("Enter the candidate's response:\n")
 # Call the function to assess the candidate
 result = assess_candidate(response)
 print(result)
