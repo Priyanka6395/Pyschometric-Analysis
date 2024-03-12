@@ -5,7 +5,7 @@ import openai
 app = FastAPI()
 
 # Set Azure OpenAI API credentials
-AZURE_OPEN_AI_KEY = "7ba60247d42848a99f9446709e5de3c9"
+AZURE_OPEN_AI_KEY = "your key here"
 AZURE_OPEN_AI_MODEL = "reaidy-playground"
 AZURE_API_VERSION = "2023-06-01-preview"
 AZURE_BASE_URL = "https://reaidy-open-ai.openai.azure.com/"
