@@ -2,7 +2,9 @@
 
 FastAPI Azure OpenAI Assessment
 This repository contains a FastAPI application integrated with the Azure OpenAI API to assess candidate responses. The application is designed to evaluate candidate responses based on predefined criteria for psychological behavior, logical behavior, and mental behavior.
-------------------------------------------------------------------------------------------------PROCEDURE-----------------------------------------------------------------------------------------------------------
+
+**PROCEDURE **
+
 *Getting Started*
 To get started with this application, follow these steps:
 
